@@ -1,0 +1,69 @@
+/*
+Template Name: Travels
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+
+/*********************services****************/
+.main_serv {
+background-image: url(../img/41.jpg);
+background-position: center;
+}
+.serv_1m2 span {
+width: 100px;
+height: 100px;
+line-height: 100px;
+}
+/*********************services_end****************/
+
+
+
+@media screen and (max-width : 767px){
+.serv_1m {
+margin-top:8px;
+margin-bottom:8px;
+ }
+.serv_1m1 img{
+ min-height:425px;
+ }
+#sub .button{
+padding: 17px 17px 16px 17px;
+font-size:14px; 
+ }
+#sub .button_1{
+padding: 17px 17px 16px 17px;
+font-size:14px;  
+ }
+ }
+
+@media (min-width:576px) and (max-width:767px) {
+.serv_1m2{
+padding-top:30%!important;
+}
+
+ }
+@media (min-width:768px) and (max-width:991px) {
+.serv_1m1 img{
+ min-height:425px;
+ }
+.serv_1m2 p{
+font-size:14px;
+ }
+.serv_1m2{
+padding:30px 20px!important;
+ }
+ }
+
+@media (min-width:992px) and (max-width:1200px) {
+.serv_1m1 img{
+ min-height:425px;
+ }
+.serv_1m2{
+padding:40px 20px!important;
+ }
+ }
+
+
+

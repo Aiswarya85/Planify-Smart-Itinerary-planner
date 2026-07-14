@@ -1,0 +1,509 @@
+dest_tb
+#	Name	Type	Collation	Attributes	Null	Default	Comments	Extra	Action
+	1	id Primary	int(11)			No	None		AUTO_INCREMENT	Change Change	Drop Drop	
+More More
+	2	place Index	int(11)			No	None			Change Change	Drop Drop	
+More More
+	3	destination	varchar(500)	utf8mb4_general_ci		No	None			Change Change	Drop Drop	
+More More
+	4	description	varchar(500)	utf8mb4_general_ci		No	None			Change Change	Drop Drop	
+More More
+	5	photo	varchar(5000)	utf8mb4_general_ci		No	None			Change Change	Drop Drop	
+More More
+	6	rating	varchar(100)	utf8mb4_general_ci		No	None			Change Change	Drop Drop	
+More More
+	7	activities Index	int(11)			No	None			Change Change	Drop Drop	
+More More
+	8	map	varchar(5000)	utf8mb4_general_ci		No	None			Change Change	Drop Drop	
+More More
+	9	distance	int(11)			No	None			Change Change	Drop Drop	
+More More
+
+
+
+place_tb
+#	Name	Type	Collation	Attributes	Null	Default	Comments	Extra	Action
+	1	id Primary	int(11)			No	None		AUTO_INCREMENT	Change Change	Drop Drop	
+More More
+	2	name	varchar(150)	utf8mb4_general_ci		No	None			Change Change	Drop Drop	
+More More
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Travels</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" >
+	<link href="css/font-awesome.min.css" rel="stylesheet" >
+	<link href="css/global.css" rel="stylesheet">
+	<link href="css/contact.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+	<script src="js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+<div class="main_desti clearfix position-relative">
+ <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none; top:0;" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content bg-transparent border-0">
+			  <div class="modal-header border-0">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-close"></i></button>
+			  </div>
+			  <div class="modal-body p-0">
+				<div class="search_1">
+				   <div class="input-group">
+				<input type="text" class="form-control bg-transparent border-0" placeholder="Type your keyword..">
+				<span class="input-group-btn">
+					<button class="btn btn-primary bg-transparent border-0" type="button">
+						<i class="fa fa-search"></i></button>
+				</span>
+		</div>
+	            </div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+  
+ <div class="main_1 clearfix position-absolute top-0 w-100">
+   <section id="top" class="pt-3 pb-3">
+    <div class="container-xl">
+	 <div class="row top_1">
+	  <div class="col-md-4">
+	   <div class="top_1l">
+	    <span class="d-inline-block bg_red  rounded-circle float-start me-2 text-center"><a href="#"><i class="fa fa-phone text-white"></i></a></span>
+			<h6 class="mb-0 lh-base font_14"><a class="text-white" href="#"><b class="col_blue">For Further Inquires :</b> <br>
++(000) 345 67 89</a></h6>
+	   </div>
+	  </div>
+	  <div class="col-md-4">
+	   <div class="top_1m text-center mt-2">
+	    <h3 class="mb-0"><a class="text-white logo" href="index.html"><i class="fa fa-plane text-white"></i> <span class="logo_col">Global</span> <span class="logo_col">Tour</span></a></h3>
+	   </div>
+	  </div>
+	  
+	  <div class="col-md-4">
+	   <div class="top_1r mt-2 text-end">
+	    <span class="d-inline-block text-center rounded-circle"><a  class="text-white d-block" data-bs-target="#exampleModal2" data-bs-toggle="modal" href="#"><i class="fa fa-search"></i></a></span>
+	   </div>
+	  </div>
+	 </div>
+	</div>
+   </section>
+   <section id="header">
+<nav class="navbar navbar-expand-md navbar-light pt-3 pb-3" id="navbar_sticky">
+  <div class="container-xl">
+    <a class="navbar-brand fs-3 p-0 fw-bold text-white  text-uppercase" href="index.html"><i class="fa fa-plane"></i> Travels </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	   <ul class="navbar-nav mb-0">
+	    
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+		 
+		<li class="nav-item">
+          <a class="nav-link" href="about.html">About </a>
+        </li>
+		
+		<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Packages
+          </a>
+          <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="package.html"> Packages</a></li>
+            <li><a class="dropdown-item border-0" href="detail.html"> Package Detail</a></li>
+          </ul>
+        </li>
+		
+		<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Blog
+          </a>
+          <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="blog.html"> Blog</a></li>
+            <li><a class="dropdown-item border-0" href="blog_detail.html"> Blog Detail</a></li>
+          </ul>
+        </li>
+		
+		<li class="nav-item">
+          <a class="nav-link active" href="destination.php">Destination</a>
+        </li>
+		
+        
+		<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Pages
+          </a>
+          <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="services.html"> Services</a></li>
+            <li><a class="dropdown-item border-0" href="contact.html"> Contact</a></li>
+          </ul>
+        </li>
+		
+      </ul>
+      <ul class="navbar-nav mb-0 ms-auto">
+	       <li class="nav-item">
+          <a class="nav-link button" href="#">BOOK NOW </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</section>
+ </div>
+ <div class="main_2 clearfix">
+   <section id="center" class="centre_o bg_back">
+ <div class="container-xl">
+  <div class="row centre_o1 text-center">
+   <div class="col-md-12">
+     <h1 class="text-white text-uppercase font_60">DESTINATION</h1>
+	 <h6 class="mb-0 text-white fw-bold"><a class="text-white" href="#">HOME</a> <span class="mx-1 text-white-50">|</span> DESTINATION</h6>
+   </div>
+  </div>
+ </div>
+</section>
+ </div>
+ 
+</div>
+
+<section id="popular" class="p_3">
+    <div class="container-xl">
+	 <div class="row popular_2  mb-4">
+	    <div class="col-md-4">
+		 <div class="popular_2m position-relative">
+		  <div class="popular_2m1">
+		   <img src="img/4.jpg" class="w-100 rounded_10" alt="abc">
+		  </div>
+		  <div class="popular_2m2 rounded_10 bg-white p-4 position-absolute">
+		   <h6 class="col_blue font_14">ITALY</h6>
+		   <h4 class="text-uppercase"><a href="#">Lorem Porta</a></h4>
+		   <p class="mb-0">Fusce hic augue velit wisi ips quibusdam pariatur, iusto.</p>
+		  </div>
+		  <div class="popular_2m3 top-0 position-absolute w-100 text-end">
+		   <span class="bg_red rounded_30 d-inline-block text-white p-1 px-2 font_14">
+		    <i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+		   </span>
+		  </div>
+		 </div>
+		</div>
+		<div class="col-md-4">
+		 <div class="popular_2m position-relative">
+		  <div class="popular_2m1">
+		   <img src="img/5.jpg" class="w-100 rounded_10" alt="abc">
+		  </div>
+		  <div class="popular_2m2 rounded_10 bg-white p-4 position-absolute">
+		   <h6 class="col_blue font_14">DUBAI</h6>
+		   <h4 class="text-uppercase"><a href="#">Dolor Amet</a></h4>
+		   <p class="mb-0">Fusce hic augue velit wisi ips quibusdam pariatur, iusto.</p>
+		  </div>
+		  <div class="popular_2m3 top-0 position-absolute w-100 text-end">
+		   <span class="bg_red rounded_30 d-inline-block text-white p-1 px-2 font_14">
+		    <i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+		   </span>
+		  </div>
+		 </div>
+		</div>
+		<div class="col-md-4">
+		 <div class="popular_2m position-relative">
+		  <div class="popular_2m1">
+		   <img src="img/6.jpg" class="w-100 rounded_10" alt="abc">
+		  </div>
+		  <div class="popular_2m2 rounded_10 bg-white p-4 position-absolute">
+		   <h6 class="col_blue font_14">JAPAN</h6>
+		   <h4 class="text-uppercase"><a href="#">Eget Quis</a></h4>
+		   <p class="mb-0">Fusce hic augue velit wisi ips quibusdam pariatur, iusto.</p>
+		  </div>
+		  <div class="popular_2m3 top-0 position-absolute w-100 text-end">
+		   <span class="bg_red rounded_30 d-inline-block text-white p-1 px-2 font_14">
+		    <i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+		   </span>
+		  </div>
+		 </div>
+		</div>
+	 </div>
+	 <div class="row popular_2">
+	    <div class="col-md-4">
+		 <div class="popular_2m position-relative">
+		  <div class="popular_2m1">
+		   <img src="img/31.jpg" class="w-100 rounded_10" alt="abc">
+		  </div>
+		  <div class="popular_2m2 rounded_10 bg-white p-4 position-absolute">
+		   <h6 class="col_blue font_14">ITALY</h6>
+		   <h4 class="text-uppercase"><a href="#">Lorem Porta</a></h4>
+		   <p class="mb-0">Fusce hic augue velit wisi ips quibusdam pariatur, iusto.</p>
+		  </div>
+		  <div class="popular_2m3 top-0 position-absolute w-100 text-end">
+		   <span class="bg_red rounded_30 d-inline-block text-white p-1 px-2 font_14">
+		    <i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+		   </span>
+		  </div>
+		 </div>
+		</div>
+		<div class="col-md-4">
+		 <div class="popular_2m position-relative">
+		  <div class="popular_2m1">
+		   <img src="img/32.jpg" class="w-100 rounded_10" alt="abc">
+		  </div>
+		  <div class="popular_2m2 rounded_10 bg-white p-4 position-absolute">
+		   <h6 class="col_blue font_14">DUBAI</h6>
+		   <h4 class="text-uppercase"><a href="#">Dolor Amet</a></h4>
+		   <p class="mb-0">Fusce hic augue velit wisi ips quibusdam pariatur, iusto.</p>
+		  </div>
+		  <div class="popular_2m3 top-0 position-absolute w-100 text-end">
+		   <span class="bg_red rounded_30 d-inline-block text-white p-1 px-2 font_14">
+		    <i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+		   </span>
+		  </div>
+		 </div>
+		</div>
+		<div class="col-md-4">
+		 <div class="popular_2m position-relative">
+		  <div class="popular_2m1">
+		   <img src="img/33.jpg" class="w-100 rounded_10" alt="abc">
+		  </div>
+		  <div class="popular_2m2 rounded_10 bg-white p-4 position-absolute">
+		   <h6 class="col_blue font_14">JAPAN</h6>
+		   <h4 class="text-uppercase"><a href="#">Eget Quis</a></h4>
+		   <p class="mb-0">Fusce hic augue velit wisi ips quibusdam pariatur, iusto.</p>
+		  </div>
+		  <div class="popular_2m3 top-0 position-absolute w-100 text-end">
+		   <span class="bg_red rounded_30 d-inline-block text-white p-1 px-2 font_14">
+		    <i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+		   </span>
+		  </div>
+		 </div>
+		</div>
+	 </div>
+	 <div class="row spec_o_1 bg-white shadow_box rounded_30 p-5 px-3 mx-0 mt-4">
+   <div class="col-md-3 col-sm-6">
+    <div class="spec_o_1i">
+	 <h1>55K+</h1>
+	 <h6 class="mb-0 col_blue">SATISFIED CUSTOMER</h6>
+	</div>
+   </div>
+   <div class="col-md-3 col-sm-6">
+    <div class="spec_o_1i">
+	 <h1>22+</h1>
+	 <h6 class="mb-0 col_blue">ACTIVE MEMBERS</h6>
+	</div>
+   </div>
+   <div class="col-md-3 col-sm-6">
+    <div class="spec_o_1i">
+	 <h1>125+</h1>
+	 <h6 class="mb-0 col_blue">TOUR DESTINATION</h6>
+	</div>
+   </div>
+   <div class="col-md-3 col-sm-6">
+    <div class="spec_o_1i border-0">
+	 <h1>39+</h1>
+	 <h6 class="mb-0 col_blue">TRAVEL GUIDES</h6>
+	</div>
+   </div>
+  </div>
+	</div>
+   </section>
+   
+ <section id="sub" class="pt-5 pb-5 bg_red">
+    <div class="container-xl">
+	 <div class="row sub_1">
+	    <div class="col-md-9">
+		  <div class="sub_1l">
+		     <h6 class="text-white">CALL TO ACTION</h6>
+		 <h1 class="text-white">READY FOR UNFORGATABLE <br> TRAVEL REMEMBER US!</h1>
+		 <p class="mb-0 text-white">Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum  <br> cumque laudantium. Sit ornare mollitia tenetur, aptent.</p>
+		  </div>
+		</div>
+		<div class="col-md-3">
+		  <div class="sub_1r text-end mt-5">
+		    <h6 class="mb-0"><a class="button_1" href="#">CONTACT US !</a></h6>
+		  </div>
+		</div>
+	 </div>
+	 
+	</div>
+   </section>
+
+   
+<section id="footer" class="p_3 bg_dark">
+<div class="container-xl">
+ <div class="row footer_1">
+  <div class="col-md-3">
+   <div class="footer_1i">
+     <h3><a class="text-white logo" href="index.html"><i class="fa fa-plane text-white"></i> <span class="logo_col">Global</span> <span class="logo_col">Tour</span></a></h3>
+	 <p class="mb-0 mt-3 text-white">Urna ratione ante harum provident, eleifend, vulputate molestiae proin fringilla, praesentium magna conubia at perferendis, pretium, aenean aut ultrices.</p>
+   </div>
+  </div>
+  <div class="col-md-3">
+   <div class="footer_1i">
+     <h5 class="text-white">RECENT POST</h5>
+	 <hr class="line mb-4">
+	 <div class="footer_1i1 row">
+	    <div class="col-md-4 col-4 pe-0">
+		 <div class="footer_1i1l">
+		   <img src="img/12.jpg" class="w-100 rounded_10" alt="abc">
+		 </div>
+		</div>
+		<div class="col-md-8 col-8">
+		 <div class="footer_1i1r">
+		  <h6 class="font_14 mb-1 gw-bold"><a class="text-white" href="#">BEST JOURNEY TO PEACEFUL PLACES</a></h6>
+		  <h6 class="mb-0 font_14 text-white-50">May 6, 2019</h6>
+		 </div>
+		</div>
+	   </div>
+	   <div class="footer_1i1 row mt-3">
+	    <div class="col-md-4 col-4 pe-0">
+		 <div class="footer_1i1l">
+		   <img src="img/13.jpg" class="w-100 rounded_10" alt="abc">
+		 </div>
+		</div>
+		<div class="col-md-8 col-8">
+		 <div class="footer_1i1r">
+		  <h6 class="font_14 mb-1 gw-bold"><a class="text-white" href="#">TRAVEL WITH FRIENDS IS BEST</a></h6>
+		  <h6 class="mb-0 font_14 text-white-50">May 8, 2019</h6>
+		 </div>
+		</div>
+	   </div>
+   </div>
+  </div>
+  <div class="col-md-3">
+   <div class="footer_1i">
+     <h5 class="text-white">CONTACT US</h5>
+	 <hr class="line mb-4">
+	 <p class="text-white">Feel free to contact and
+reach us !!</p>
+<h6 class="text-light"><i class="fa fa-phone-square col_blue me-1"></i> Office: +123 4567 890</h6>
+	   <h6 class="text-light mt-3"><i class="fa fa-envelope col_blue me-1"></i> info@gmail.com</h6>
+	   <h6 class="text-light mt-3 mb-0"><i class="fa fa-map col_blue me-1"></i> 36 Nora Dreek, India</h6>
+   </div>
+  </div>
+  <div class="col-md-3">
+   <div class="footer_1i">
+     <h5 class="text-white">GALLERY</h5>
+	 <hr class="line mb-4">
+	<div class="footer_1i1 row">
+	   <div class="col-md-4 pe-1 ps-1 col-4">
+	    <div class="footer_1i1l">
+		  <img src="img/12.jpg" alt="abc" class="w-100 rounded_10">
+		</div>
+	   </div>
+	   <div class="col-md-4 pe-1 ps-1 col-4">
+	    <div class="footer_1i1l">
+		  <img src="img/13.jpg" alt="abc" class="w-100 rounded_10">
+		</div>
+	   </div>
+	   <div class="col-md-4 pe-1 ps-1 col-4">
+	    <div class="footer_1i1l">
+		  <img src="img/14.jpg" alt="abc" class="w-100 rounded_10">
+		</div>
+	   </div>
+	  </div>
+	  <div class="footer_1i1 row mt-2">
+	   <div class="col-md-4 pe-1 ps-1 col-4">
+	    <div class="footer_1i1l">
+		  <img src="img/15.jpg" alt="abc" class="w-100 rounded_10">
+		</div>
+	   </div>
+	   <div class="col-md-4 pe-1 ps-1 col-4">
+	    <div class="footer_1i1l">
+		  <img src="img/16.jpg" alt="abc" class="w-100 rounded_10">
+		</div>
+	   </div>
+	   <div class="col-md-4 pe-1 ps-1 col-4">
+	    <div class="footer_1i1l">
+		  <img src="img/17.jpg" alt="abc" class="w-100 rounded_10">
+		</div>
+	   </div>
+	  </div>
+   </div>
+  </div>
+ </div><hr class="mt-4 mb-4 hr_bg">
+ <div class="row footer_2">
+  <div class="col-md-7">
+   <div class="footer_2l">
+    <p class="text-light">Subscribe our newsletter for more update & news !!</p>
+	<input type="text" class="form-control font_14 float-start rounded_30 me-3" placeholder="Enter Your Email">
+	<h6 class="mb-0 d-inline-block"><a class="button" href="#">SUBSCRIBE</a></h6>
+   </div>
+  </div>
+  <div class="col-md-5">
+   <div class="footer_2r text-end">
+    <ul class="social_tag">
+	 <li class="d-inline-block"><a href="#"><i class="fa fa-facebook"></i></a></li>
+	 <li class="d-inline-block"><a href="#"><i class="fa fa-twitter"></i></a></li>
+	 <li class="d-inline-block"><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+	 <li class="d-inline-block"><a href="#"><i class="fa fa-instagram"></i></a></li>
+	 <li class="d-inline-block"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+	</ul>
+	<ul class="mb-0  font_14 tags">
+	   <li class="d-inline-block"><a href="#">Privacy Policy</a></li>
+	   <li class="d-inline-block mx-2 text-muted">|</li>
+	   <li class="d-inline-block"><a href="#">Term & Condition</a></li>
+	    <li class="d-inline-block mx-2 text-muted">|</li>
+	   <li class="d-inline-block"><a href="#">FAQ</a></li>
+	  </ul>
+   </div>
+  </div>
+ </div><hr class="mt-4 mb-4 hr_bg">
+ <div class="row footer_3 text-center">
+  <div class="col-md-12">
+    <p class="mb-0 text-light">© 2013 Your Website Name. All Rights Reserved | Design by <a class="col_blue" href="http://www.templateonweb.com">TemplateOnWeb</a></p>
+  </div>
+ </div>
+</div>
+</section>
+
+<script>
+window.onscroll = function() {myFunction()};
+var navbar_sticky = document.getElementById("navbar_sticky");
+var sticky = navbar_sticky.offsetTop;
+var navbar_height = document.querySelector('.navbar').offsetHeight;
+function myFunction() {
+  if (window.pageYOffset >= sticky + navbar_height) {
+    navbar_sticky.classList.add("sticky")
+	//document.body.style.paddingTop = navbar_height + 'px';
+  } else {
+    navbar_sticky.classList.remove("sticky");
+	document.body.style.paddingTop = '0'
+  }
+}
+</script>
+
+</body>
+
+</html>
+
+
+
+
+I want to create the page with same code and attach them to the database and fetch the details from the database

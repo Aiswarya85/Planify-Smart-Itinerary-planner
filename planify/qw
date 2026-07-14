@@ -1,0 +1,6 @@
+$acco = mysqli_query($con, "SELECT * FROM ac_tb");
+while ($ac = mysqli_fetch_assoc($acco)) {
+$hid=$ac['h_type'];
+$f=mysqli_query($con,"select * from facility_tb where f_id=$fac");
+$fa=mysqli_fetch_assoc($f)['f_type'];
+}
